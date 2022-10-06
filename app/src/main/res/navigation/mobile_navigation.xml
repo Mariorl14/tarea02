@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_sede">
+
+    <fragment
+        android:id="@+id/nav_sede"
+        android:name="com.tarea02.ui.sede.SedeFragment"
+        android:label="@string/menu_sede"
+        tools:layout="@layout/fragment_sede" >
+        <action
+            android:id="@+id/action_nav_sede_to_addSedeFragment"
+            app:destination="@id/addSedeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.tarea02.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.tarea02.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addSedeFragment"
+        android:name="com.tarea02.addSedeFragment"
+        android:label="fragment_add_sede"
+        tools:layout="@layout/fragment_add_sede" >
+        <action
+            android:id="@+id/action_addSedeFragment_to_nav_sede"
+            app:destination="@id/nav_sede" />
+    </fragment>
+</navigation>
